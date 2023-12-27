@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Picker</title>
+  </head>
+  <body>
+    <h2>Image Picker</h2>
+
+    <label for="pilihGambar">Pilih Gambar:</label>
+    <select id="pilihGambar" onchange="tampilkanGambar()">
+      <option value="beruang">beruang</option>
+      <option value="harimau">harimau</option>
+      <option value="gajah">gajah</option>
+      <option value="singa">singa</option>
+      <option value="serigala">serigala</option>
+      <option value="macan tutul">macan tutul</option>
+    </select>
+    <br />
+
+    <img
+      src="beruang.jpeg" 
+      id="gambarTerpilih"
+      alt="Gambar Terpilih"
+      width="300"
+    />
+     
+
+    <script>
+      function tampilkanGambar() {
+        let nilaiTerpilih = document.getElementById("pilihGambar").value;
+        let gambarTerpilih = document.getElementById("gambarTerpilih");
+
+        // Menampilkan gambar sesuai dengan pilihan dropdown
+        switch (nilaiTerpilih) {
+            case "beruang":
+            gambarTerpilih.src = "beruang.jpeg";
+            break;
+            case "harimau":
+            gambarTerpilih.src = "harimau.jpeg";
+            break;
+            case "gajah":
+            gambarTerpilih.src ="Gajah.jpeg";
+            break;
+            case "singa":
+            gambarTerpilih.src = "singa.jpeg";
+            break;
+            case "serigala":
+            gambarTerpilih.src = "serigala.jpeg";
+            break;
+            case "macan tutul":
+            gambarTerpilih.src = "macan tutul.jpeg";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
